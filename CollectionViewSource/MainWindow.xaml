@@ -1,0 +1,16 @@
+﻿<Window x:Class="CollectionViewSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollectionViewSource"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="350" Width="600"
+        DataContext="{StaticResource ViewModel}">
+    <Grid>
+        <DataGrid Margin="10,69,10,10" IsReadOnly="True" ItemsSource="{Binding Path=People}"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,26,0,0" Text="{Binding Path=FilterValue, UpdateSourceTrigger=PropertyChanged, Delay=250}" TextWrapping="Wrap" VerticalAlignment="Top" Width="580" Height="20"/>
+
+    </Grid>
+</Window>
